@@ -1,32 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About (Staff)</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - About (Staff)</title>
+  <link rel="stylesheet" href="css/navigation.css" />
+  <link rel="stylesheet" href="css/faq.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet" />
+  <script defer src="js/faq.js"></script>
+  <style>
+    body {
+      font-family: 'Oxanium', sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding: 20px;
+    }
+    .faq-section h1 {
+      color: #333;
+      font-size: 2em;
+    }
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+    .faq-box {
+      width: 80%;
+      max-width: 500px;
+      background: #0D9C90;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .faq-box:hover {
+      transform: translateY(-3px);
+    }
+    .question {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: white;
+    }
+    .answer {
+      display: none;
+      font-size: 1em;
+      margin-top: 10px;
+      color: #eae4e9;
+    }
+    .faq-box.active .answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVIGATION BAR STARTS -->
+  <nav class="navbar">
+    <img src="photos/GWC_Logo.png" alt="GWC Logo" width="120px" class="logo" />
+    <ul class="nav-links">
+      <li><a href="home.html" class="nav-btn">Home</a></li>
+      <li><a href="about.html" class="nav-btn">About</a></li>
+      <li><a href="students.html" class="nav-btn">Students</a></li>
+      <li><a href="volunteers.html" class="nav-btn">Volunteers</a></li>
+      <li><a href="photoGallery.html" class="nav-btn">Photo Gallery</a></li>
+      <li><a href="contact.html" class="nav-btn contact-btn">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- NAVIGATION BAR ENDS -->
 
-    <link rel="stylesheet" href= "css/navigation.css" />
-    <!--OXANIUM-->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- NAVIGATION BAR STARTS -->
-    <nav class="navbar">
-      <img src="photos/GWC_Logo.png" alt="GWC Logo" width="120px" class="logo" />
-      <ul class="nav-links">
-        <li><a href="home.html" class="nav-btn">Home</a></li>
-        <li><a href="about.html" class="nav-btn">About</a></li>
-        <li><a href="students.html" class="nav-btn">Students</a></li>
-        <li><a href="volunteers.html" class="nav-btn">Volunteers</a></li>
-        <li><a href="photoGallery.html" class="nav-btn">Photo Gallery</a></li>
-        <li><a href="contact.html" class="nav-btn contact-btn">Contact</a></li>
-      </ul>
-    </nav>
-    <!-- NAVIGATION BAR ENDS -->
-  </body>
+  <!-- FAQ SECTION STARTS -->
+  <section class="faq-section">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq-container">
+      <div class="faq-box">
+        <div class="question">What does GWC stand for?</div>
+        <div class="answer">GWC stands for Girls Who Code, an organization that supports young women in tech. We are committed to helping people learn about the wonderful world of tech!</div>
+      </div>
+      <div class="faq-box">
+        <div class="question">How can I join the program?</div>
+        <div class="answer">You can navigate to our Get Involved page above or contact our team.</div>
+      </div>
+      <div class="faq-box">
+        <div class="question">Do I need coding experience?</div>
+        <div class="answer">No prior experience is needed! We welcome all skill levels and have different levels of classes depending on your experience.</div>
+      </div>
+      <div class="faq-box">
+        <div class="question">What programming languages and topics will I learn?</div>
+        <div class="answer">In the beginner level classes, you will learn the basics of programming with Turtles and in our advanced classes, you will code with Python.</div>
+      </div>
+      <div class="faq-box">
+        <div class="question">Is there a membership fee?</div>
+        <div class="answer">No, the organization is free for any member to join!</div>
+      </div>
+    </div>
+  </section>
+  <!-- FAQ SECTION ENDS -->
+  
+  <script>
+    document.querySelectorAll('.faq-box').forEach(box => {
+      box.addEventListener('click', () => {
+        box.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
 </html>
