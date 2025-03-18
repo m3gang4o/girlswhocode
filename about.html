@@ -1,111 +1,487 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAQ - About (Staff)</title>
-  <link rel="stylesheet" href="css/navigation.css" />
-  <link rel="stylesheet" href="css/faq.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap" rel="stylesheet" />
-  <script defer src="js/faq.js"></script>
-  <style>
-    body {
-      font-family: 'Oxanium', sans-serif;
-      background-color: #f9f9f9;
-      text-align: center;
-      padding: 20px;
-    }
-    .faq-section h1 {
-      color: #333;
-      font-size: 2em;
-    }
-    .faq-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-      margin-top: 20px;
-    }
-    .faq-box {
-      width: 80%;
-      max-width: 500px;
-      background: #0D9C90;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .faq-box:hover {
-      transform: translateY(-3px);
-    }
-    .question {
-      font-weight: bold;
-      font-size: 1.2em;
-      color: white;
-    }
-    .answer {
-      display: none;
-      font-size: 1em;
-      margin-top: 10px;
-      color: #eae4e9;
-    }
-    .faq-box.active .answer {
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <!-- NAVIGATION BAR STARTS -->
-  <nav class="navbar">
-    <img src="photos/GWC_Logo.png" alt="GWC Logo" width="120px" class="logo" />
-    <ul class="nav-links">
-      <li><a href="home.html" class="nav-btn">Home</a></li>
-      <li><a href="about.html" class="nav-btn">About</a></li>
-      <li><a href="students.html" class="nav-btn">Students</a></li>
-      <li><a href="volunteers.html" class="nav-btn">Volunteers</a></li>
-      <li><a href="photoGallery.html" class="nav-btn">Photo Gallery</a></li>
-      <li><a href="contact.html" class="nav-btn contact-btn">Contact</a></li>
-    </ul>
-  </nav>
-  <!-- NAVIGATION BAR ENDS -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About (Staff)</title>
 
-  <!-- FAQ SECTION STARTS -->
-  <section class="faq-section">
-    <h1>Frequently Asked Questions</h1>
-    <div class="faq-container">
-      <div class="faq-box">
-        <div class="question">What does GWC stand for?</div>
-        <div class="answer">GWC stands for Girls Who Code, an organization that supports young women in tech. We are committed to helping people learn about the wonderful world of tech!</div>
+    <link rel="stylesheet" href="css/about.css" />
+
+    <!-- OXANIUM FONT [STARTS] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- OXANIUM FONT [ENDS] -->
+  </head>
+
+  <body>
+    <!-- NAVIGATION BAR [STARTS] -->
+    <nav class="navbar">
+      <img src="img/GWC_Logo.png" alt="GWC Logo" class="logo" />
+      <ul class="nav-links">
+        <li><a href="home.html" class="nav-btn">Home</a></li>
+        <li><a href="about.html" class="nav-btn">About</a></li>
+        <li><a href="students.html" class="nav-btn">Students</a></li>
+        <li><a href="volunteers.html" class="nav-btn">Volunteers</a></li>
+        <li><a href="photoGallery.html" class="nav-btn">Photo Gallery</a></li>
+        <li><a href="contact.html" class="nav-btn contact-btn">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- NAVIGATION BAR [ENDS] -->
+
+    <!-- HERO SECTION [STARTS] -->
+    <section class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <img
+            src="img/GirlsWhoCode_Header.png"
+            alt="GirlsWhoCode Logo"
+            class="hero-logo margin-bottom--md"
+          />
+          <h1>
+            Together, let's <span class="highlight">empower</span> and
+            <span class="highlight">inspire</span> through code!
+          </h1>
+          <p class="hero-description">
+            Our passionate community of women in tech at UNC-Chapel Hill is
+            dedicated to breaking barriers and creating innovative solutions.
+            Join us in making technology more inclusive and diverse.
+          </p>
+          <a href="contact.html" class="cta-button">Join Our Community</a>
+        </div>
+
+        <div class="hero-gallery">
+          <div class="gallery-container">
+            <img
+              src="img/GWC_Photo.jpg"
+              alt="Girls Who Code Event"
+              class="gallery-image"
+            />
+          </div>
+        </div>
       </div>
-      <div class="faq-box">
-        <div class="question">How can I join the program?</div>
-        <div class="answer">You can navigate to our Get Involved page above or contact our team.</div>
+    </section>
+    <!-- HERO SECTION [ENDS] -->
+
+    <!-- STATS SECTION [STARTS] -->
+    <section class="stats-section">
+      <div class="stats-header">
+        <img src="img/star_img.png" alt="Image of Star" class="gwc-logo" />
+        <h2 class="sub-heading">GirlsWhoCode</h2>
+        <h2 class="stats-title">About Us</h2>
+        <svg
+          class="underline-decoration"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1418 125"
+        >
+          <path
+            d="M1412.29 72.17c-11.04-5.78-20.07-14.33-85.46-25.24-22.37-3.63-44.69-7.56-67.07-11.04-167.11-22.06-181.65-21.24-304.94-30.56C888.78 1.39 822.57 1.1 756.44 0c-46.63-.11-93.27 1.56-139.89 2.5C365.5 13.55 452.86 7.68 277.94 23.15 202.57 33.32 127.38 45.01 52.07 55.69c-11.23 2.41-22.63 4.17-33.71 7.22C6.1 66.33 5.64 66.19 3.89 67.79c-7.99 5.78-2.98 20.14 8.72 17.5 33.99-9.47 32.28-8.57 178.06-29.66 4.26 4.48 7.29 3.38 18.42 3.11 13.19-.32 26.38-.53 39.56-1.12 53.51-3.81 106.88-9.62 160.36-13.95 18.41-1.3 36.8-3.12 55.21-4.7 23.21-1.16 46.43-2.29 69.65-3.4 120.28-2.16 85.46-3.13 234.65-1.52 23.42.99 1.57-.18 125.72 6.9 96.61 8.88 200.92 27.94 295.42 46.12 40.87 7.91 116.67 23.2 156.31 36.78 3.81 1.05 8.28-.27 10.51-3.58 3.17-3.72 2.66-9.7-.78-13.13-3.25-3.12-8.14-3.44-12.18-5.08-17.89-5.85-44.19-12.09-63.67-16.56l26.16 3.28c23.02 3.13 46.28 3.92 69.34 6.75 10.8.96 25.43 1.81 34.34-4.39 2.26-1.54 4.86-2.75 6.21-5.27 2.76-4.59 1.13-11.06-3.59-13.68ZM925.4 23.77c37.64 1.4 153.99 10.85 196.64 14.94 45.95 5.51 91.89 11.03 137.76 17.19 24.25 4.77 74.13 11.21 101.72 18.14-11.87-1.15-23.77-1.97-35.65-3.06-133.46-15.9-266.8-33.02-400.47-47.21Z"
+            fill="#0D9C90"
+          ></path>
+        </svg>
+        <p class="stats-description">
+          Girls Who Code at UNC-Chapel Hill is a dynamic student organization
+          offering free programming courses for middle and high school students
+          from Chapel Hill and surrounding communities. Since 2016, we've been
+          breaking barriers in tech education, providing hands-on learning
+          experiences through beginner and advanced programming courses. Our
+          dedicated team of UNC student volunteers serves as curriculum
+          developers, classroom facilitators, and mentors, transforming abstract
+          concepts into engaging learning experiences.
+        </p>
       </div>
-      <div class="faq-box">
-        <div class="question">Do I need coding experience?</div>
-        <div class="answer">No prior experience is needed! We welcome all skill levels and have different levels of classes depending on your experience.</div>
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-icon">
+            <img src="svg/icons8-building-100.png" alt="Calendar Icon" />
+          </div>
+          <div class="stat-content">
+            <h3 class="founding-year">2016</h3>
+            <p>Founded At UNC</p>
+          </div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon">
+            <img src="svg/icons8-book-100.png" alt="Book Icon" />
+          </div>
+          <div class="stat-content">
+            <h3 class="counter" data-target="600">0</h3>
+            <span class="plus">+</span>
+            <p>Students Served Since 2015</p>
+          </div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon vote">
+            <img src="svg/icons8-party-100.png" alt="Vote Icon" />
+          </div>
+          <div class="stat-content">
+            <h3 class="counter" data-target="90">0</h3>
+            <span class="plus">+</span>
+            <p>Members</p>
+          </div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon">
+            <img src="svg/icons8-trust-100.png" alt="Rock Icon" />
+          </div>
+          <div class="stat-content">
+            <h3 class="counter" data-target="75">0</h3>
+            <span class="plus">+</span>
+            <p>UNC Student Volunteers</p>
+          </div>
+        </div>
       </div>
-      <div class="faq-box">
-        <div class="question">What programming languages and topics will I learn?</div>
-        <div class="answer">In the beginner level classes, you will learn the basics of programming with Turtles and in our advanced classes, you will code with Python.</div>
+    </section>
+    <!-- STATS SECTION [ENDS] -->
+
+    <!-- MEMBERS SECTION [STARTS] -->
+    <section class="members-section">
+      <div class="members-container">
+        <div class="section-header">
+          <img src="img/star_img.png" alt="Image of Star" class="gwc-logo" />
+          <h2 class="sub-heading">CO-HEADS</h2>
+          <h2 class="meet-team">Meet the Team!</h2>
+          <svg
+            class="underline-decoration margin-bottom--lxg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1418 125"
+          >
+            <path
+              d="M1412.29 72.17c-11.04-5.78-20.07-14.33-85.46-25.24-22.37-3.63-44.69-7.56-67.07-11.04-167.11-22.06-181.65-21.24-304.94-30.56C888.78 1.39 822.57 1.1 756.44 0c-46.63-.11-93.27 1.56-139.89 2.5C365.5 13.55 452.86 7.68 277.94 23.15 202.57 33.32 127.38 45.01 52.07 55.69c-11.23 2.41-22.63 4.17-33.71 7.22C6.1 66.33 5.64 66.19 3.89 67.79c-7.99 5.78-2.98 20.14 8.72 17.5 33.99-9.47 32.28-8.57 178.06-29.66 4.26 4.48 7.29 3.38 18.42 3.11 13.19-.32 26.38-.53 39.56-1.12 53.51-3.81 106.88-9.62 160.36-13.95 18.41-1.3 36.8-3.12 55.21-4.7 23.21-1.16 46.43-2.29 69.65-3.4 120.28-2.16 85.46-3.13 234.65-1.52 23.42.99 1.57-.18 125.72 6.9 96.61 8.88 200.92 27.94 295.42 46.12 40.87 7.91 116.67 23.2 156.31 36.78 3.81 1.05 8.28-.27 10.51-3.58 3.17-3.72 2.66-9.7-.78-13.13-3.25-3.12-8.14-3.44-12.18-5.08-17.89-5.85-44.19-12.09-63.67-16.56l26.16 3.28c23.02 3.13 46.28 3.92 69.34 6.75 10.8.96 25.43 1.81 34.34-4.39 2.26-1.54 4.86-2.75 6.21-5.27 2.76-4.59 1.13-11.06-3.59-13.68ZM925.4 23.77c37.64 1.4 153.99 10.85 196.64 14.94 45.95 5.51 91.89 11.03 137.76 17.19 24.25 4.77 74.13 11.21 101.72 18.14-11.87-1.15-23.77-1.97-35.65-3.06-133.46-15.9-266.8-33.02-400.47-47.21Z"
+              fill="#0D9C90"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-image-wrapper">
+              <img
+                src="img/McMahon_Headshot.jpg"
+                alt="Connor (Cece) MaMahon"
+                class="member-image"
+              />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Connor (Cece) MaMahon</h3>
+              <p class="member-role">Facilitator Advisor</p>
+              <p class="member-pronouns">(she/her)</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image-wrapper">
+              <img
+                src="img/Sarah_Zhang.jpg"
+                alt="Sarah Zhang"
+                class="member-image"
+              />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Sarah Zhang</h3>
+              <p class="member-role">Logistics Chair</p>
+              <p class="member-pronouns">(she/they)</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image-wrapper">
+              <img
+                src="img/Pallavi_Sastry.jpg"
+                alt="Pallavi Sastry"
+                class="member-image pallavi-image"
+              />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Pallavi Sastry</h3>
+              <p class="member-role">Curriculum Design Chair</p>
+              <p class="member-pronouns">(she/her)</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image-wrapper">
+              <img
+                src="img/Nyasia_Kenan.jpg"
+                alt="Nyasia Kenan"
+                class="member-image"
+              />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Nyasia Kenan</h3>
+              <p class="member-role">Outreach Chair</p>
+              <p class="member-pronouns">(she/her)</p>
+            </div>
+          </div>
+          <div class="team-member">
+            <div class="member-image-wrapper">
+              <img
+                src="img/Meghan_Christensen.jpg"
+                alt="Meghan Christensen"
+                class="member-image meghan-image"
+              />
+            </div>
+            <div class="member-info">
+              <h3 class="member-name">Meghan Christensen</h3>
+              <p class="member-role">Educational Affairs Chair</p>
+              <p class="member-pronouns">(she/her)</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="faq-box">
-        <div class="question">Is there a membership fee?</div>
-        <div class="answer">No, the organization is free for any member to join!</div>
+    </section>
+    <!-- MEMBERS SECTION [ENDS] -->
+
+    <!-- FAQ SECTION [STARTS] -->
+    <section class="faq-section">
+      <img src="img/star_img.png" alt="Image of Star" class="gwc-logo" />
+      <h2 class="sub-heading">More About Us</h2>
+      <h1>Frequently Asked Questions</h1>
+      <svg
+        class="underline-decoration"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1418 125"
+      >
+        <path
+          d="M1412.29 72.17c-11.04-5.78-20.07-14.33-85.46-25.24-22.37-3.63-44.69-7.56-67.07-11.04-167.11-22.06-181.65-21.24-304.94-30.56C888.78 1.39 822.57 1.1 756.44 0c-46.63-.11-93.27 1.56-139.89 2.5C365.5 13.55 452.86 7.68 277.94 23.15 202.57 33.32 127.38 45.01 52.07 55.69c-11.23 2.41-22.63 4.17-33.71 7.22C6.1 66.33 5.64 66.19 3.89 67.79c-7.99 5.78-2.98 20.14 8.72 17.5 33.99-9.47 32.28-8.57 178.06-29.66 4.26 4.48 7.29 3.38 18.42 3.11 13.19-.32 26.38-.53 39.56-1.12 53.51-3.81 106.88-9.62 160.36-13.95 18.41-1.3 36.8-3.12 55.21-4.7 23.21-1.16 46.43-2.29 69.65-3.4 120.28-2.16 85.46-3.13 234.65-1.52 23.42.99 1.57-.18 125.72 6.9 96.61 8.88 200.92 27.94 295.42 46.12 40.87 7.91 116.67 23.2 156.31 36.78 3.81 1.05 8.28-.27 10.51-3.58 3.17-3.72 2.66-9.7-.78-13.13-3.25-3.12-8.14-3.44-12.18-5.08-17.89-5.85-44.19-12.09-63.67-16.56l26.16 3.28c23.02 3.13 46.28 3.92 69.34 6.75 10.8.96 25.43 1.81 34.34-4.39 2.26-1.54 4.86-2.75 6.21-5.27 2.76-4.59 1.13-11.06-3.59-13.68ZM925.4 23.77c37.64 1.4 153.99 10.85 196.64 14.94 45.95 5.51 91.89 11.03 137.76 17.19 24.25 4.77 74.13 11.21 101.72 18.14-11.87-1.15-23.77-1.97-35.65-3.06-133.46-15.9-266.8-33.02-400.47-47.21Z"
+          fill="#0D9C90"
+        ></path>
+      </svg>
+      <div class="faq-container">
+        <div class="faq-box">
+          <div class="question">What does GWC stand for?</div>
+          <div class="answer">
+            GWC stands for Girls Who Code, an organization that supports young
+            women in tech. We are committed to helping people learn about the
+            wonderful world of tech!
+          </div>
+        </div>
+        <div class="faq-box">
+          <div class="question">How can I join the program?</div>
+          <div class="answer">
+            You can navigate to our Get Involved page above or contact our team.
+          </div>
+        </div>
+        <div class="faq-box">
+          <div class="question">Do I need coding experience?</div>
+          <div class="answer">
+            No prior experience is needed! We welcome all skill levels and have
+            different levels of classes depending on your experience.
+          </div>
+        </div>
+        <div class="faq-box">
+          <div class="question">
+            What programming languages and topics will I learn?
+          </div>
+          <div class="answer">
+            In the beginner level classes, you will learn the basics of
+            programming with Turtles and in our advanced classes, you will code
+            with Python.
+          </div>
+        </div>
+        <div class="faq-box">
+          <div class="question">Is there a membership fee?</div>
+          <div class="answer">
+            No, the organization is free for any member to join!
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-  <!-- FAQ SECTION ENDS -->
-  
+    </section>
+    <!-- FAQ SECTION [ENDS] -->
+
+    <!-- FOOTER SECTION [STARTS] -->
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+          <div class="logo-container">
+            <div class="logo-gradient"></div>
+            <img
+              src="img/GWC_Logo.png"
+              alt="GWC Logo"
+              class="footer-logo-img"
+            />
+          </div>
+          <p class="footer-tagline">
+            <strong>GirlsWhoCode at UNC-Chapel Hill</strong>
+          </p>
+          <p class="footer-tagline--email">
+            <strong>Email:</strong> gwc-unc@cs.unc.edu
+          </p>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="footer-nav-group">
+          <div class="footer-nav">
+            <h3 class="footer-heading">Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Get Involved</a></li>
+              <li><a href="#">Photo Gallery</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="footer-nav">
+            <h3 class="footer-heading">Resources</h3>
+            <ul class="footer-links">
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div> -->
+
+          <div class="footer-nav">
+            <h3 class="footer-heading">Connect</h3>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/uncgwc/posts/?feedView=all"
+                  target="_blank"
+                  >LinkedIn</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/uncgirlswhocode/"
+                  target="_blank"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://github.com/m3gang4o/girlswhocode"
+                  target="_blank"
+                  >GitHub</a
+                >
+              </li>
+              <li>
+                <a href="mailto:gwc-unc@cs.unc.edu" target="_blank">Email</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p class="copyright">
+            © 2025 GirlsWhoCode at UNC-Chapel Hill. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- FOOTER SECTION [ENDS] -->
+  </body>
+  <!-- ANIMATIONs [STARTS] -->
   <script>
-    document.querySelectorAll('.faq-box').forEach(box => {
-      box.addEventListener('click', () => {
-        box.classList.toggle('active');
+    // COUNTER ANIMATION [STARTS]
+    const counters = document.querySelectorAll(".counter");
+    const speed = 200;
+
+    const animateCounter = (counter) => {
+      const target = +counter.getAttribute("data-target");
+      counter.innerText = "0"; // Reset counter to 0 before animation starts
+      let count = 0;
+
+      const updateCount = () => {
+        const increment = target / speed;
+
+        if (count < target) {
+          count += increment;
+          counter.innerText = Math.floor(count);
+          requestAnimationFrame(updateCount); // Use requestAnimationFrame instead of setTimeout
+        } else {
+          counter.innerText = target;
+        }
+      };
+
+      updateCount();
+    };
+
+    const observerOptions = {
+      root: null, // Use viewport as root
+      threshold: 0.5, // Trigger when 50% of element is visible
+      rootMargin: "0px", // No margin
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target); // Stop observing after animation starts
+        }
+      });
+    }, observerOptions);
+
+    // Start observing each counter
+    counters.forEach((counter) => {
+      counter.innerText = "0"; // Initialize counters to 0
+      observer.observe(counter);
+    });
+
+    // Add special year counter animation
+    const yearCounter = document.querySelector(".year-counter");
+    if (yearCounter) {
+      const startYear = parseInt(yearCounter.dataset.start);
+      const currentYear = new Date().getFullYear();
+      const yearsActive = currentYear - startYear;
+
+      const animateYears = () => {
+        let currentDisplay = startYear;
+        const duration = 2000; // 2 seconds
+        const interval = 200; // Update every 200ms
+        const steps = duration / interval;
+        let step = 0;
+
+        const updateYear = () => {
+          if (step <= steps) {
+            // Calculate progress (0 to 1)
+            const progress = step / steps;
+
+            // Add flicker effect
+            if (Math.random() > 0.7) {
+              yearCounter.textContent =
+                startYear + Math.floor(Math.random() * yearsActive);
+            } else {
+              yearCounter.textContent =
+                startYear + Math.floor(progress * yearsActive);
+            }
+
+            step++;
+            setTimeout(updateYear, interval);
+          } else {
+            // Ensure final value is correct
+            yearCounter.textContent = currentYear;
+          }
+        };
+
+        // Use the same Intersection Observer setup
+        const yearObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              animateYears();
+              yearObserver.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        yearObserver.observe(yearCounter);
+      };
+    }
+    // COUNTER ANIMATION [ENDS]
+
+    // FAQ ANIMATION [STARTS]
+    document.querySelectorAll(".faq-box").forEach((box) => {
+      box.addEventListener("click", () => {
+        box.classList.toggle("active");
       });
     });
+    // FAQ ANIMATION [ENDS]
   </script>
-</body>
 </html>
