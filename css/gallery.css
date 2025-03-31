@@ -1,0 +1,105 @@
+/*GENERAL STYLES*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    margin: 0 auto;
+  }
+  
+  body {
+    font-family: "Oxanium", sans-serif;
+  }
+
+  h1 {
+    text-align: center;
+    color: #45a29e;
+    font-size: 4rem;
+    font-family: "Oxanium", sans-serif;
+    margin: 2rem 0 0.5rem;
+    position: relative;
+}
+  
+  /*NAVIGATION BAR STARTS*/
+  
+  .logo {
+    margin: 10px 20px;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  
+  .nav-btn {
+    color: #343a40;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .nav-btn:link,
+  .nav-btn:visited {
+    text-decoration: none;
+  }
+  
+  .nav-btn:hover {
+    color: #0d9c90;
+    background-color: #e9ecef;
+  }
+  
+  .nav-btn:active {
+    background-color: #0d9c90;
+    color: #fff;
+  }
+  
+  /*NAVIGATION BAR ENDS*/
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 12%;
+}
+
+.column {
+  flex: 33%;
+  max-width: 33%;
+  /* padding: 10px; */
+}
+
+.column img {
+  /* margin-top: 10px; */
+  padding: 10px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  /* .column {
+    flex: 50%;
+    max-width: 50%;
+  } */
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
