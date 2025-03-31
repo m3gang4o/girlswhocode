@@ -3,23 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About (Staff)</title>
+    <title>Home</title>
 
-    <link rel="stylesheet" href= "css/navigation.css" />
-    <!--OXANIUM-->
+    <!-- Navigation bar styles -->
+    <link rel="stylesheet" href="css/navigation.css" />
+
+    <!-- Font: Oxanium -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* GLOBAL RESET */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        font-family: "Oxanium", sans-serif;
+        overflow-x: hidden;
+      }
+
+      /* MAIN CONTENT STYLING */
+      .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: nowrap;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+      }
+
+      .main-content img {
+        width: 40%;
+        min-width: 300px;
+        max-width: 400px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .code-snippet {
+        flex-basis: 55%;
+        font-family: monospace;
+        font-size: 12px;
+        line-height: 1.4;
+        white-space: pre-wrap;
+        color: #000;
+        word-break: break-word;
+      }
+
+      /* MOBILE RESPONSIVE */
+      @media (max-width: 768px) {
+        .main-content {
+          flex-direction: column;
+        }
+
+        .main-content img {
+          width: 70%;
+        }
+
+        .code-snippet {
+          flex-basis: 100%;
+          font-size: 11.5px;
+        }
+      }
+    </style>
   </head>
+
   <body>
     <!-- NAVIGATION BAR STARTS -->
     <nav class="navbar">
       <img src="photos/GWC_Logo.png" alt="GWC Logo" width="120px" class="logo" />
       <ul class="nav-links">
-        <li><a href="home.html" class="nav-btn">Home</a></li>
+        <li><a href="index.html" class="nav-btn">Home</a></li>
         <li><a href="about.html" class="nav-btn">About</a></li>
         <li><a href="students.html" class="nav-btn">Students</a></li>
         <li><a href="volunteers.html" class="nav-btn">Volunteers</a></li>
@@ -28,5 +92,47 @@
       </ul>
     </nav>
     <!-- NAVIGATION BAR ENDS -->
+
+    <!-- MAIN CONTENT STARTS -->
+    <div class="main-content">
+      <img src="photos/GWC.png" alt="Girls Who Code Logo" />
+
+      <div class="code-snippet">
+<pre>
+// Girls Who Club: Code, Connect, and Create!
+// Open to students, parents, teachers, and tech lovers!
+
+public class GirlsWhoClub {
+    public static void main(String[] args) {
+        welcomeMessage();
+        whatWeDo();
+        funFact();
+    }
+
+    static void welcomeMessage() {
+        System.out.println("👋 Welcome to Girls Who Club!");
+        System.out.println("A place to code, connect, and create magic—only cooler! ✨");
+    }
+
+    static void whatWeDo() {
+        System.out.println("\n🔧 What We Do:");
+        String[] activities = {
+            "💻 Teach coding",
+            "🎉 Host community events",
+            "🌱 Foster growth & creativity"
+        };
+        for (String activity : activities) {
+            System.out.println("- " + activity);
+        }
+    }
+
+    static void funFact() {
+        System.out.println("\n🧠 Fun Fact: Debugging isn’t just for code—it’s for life too! 🛠️");
+    }
+}
+</pre>
+      </div>
+    </div>
+    <!-- MAIN CONTENT ENDS -->
   </body>
 </html>
