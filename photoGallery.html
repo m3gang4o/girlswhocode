@@ -7,12 +7,9 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/navigation.css" />
     <!-- OXANIUM FONT [STARTS] -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alike&family=Kumar+One&family=Notable&family=Oxanium:wght@200..800&family=Press+Start+2P&family=Vampiro+One&display=swap" rel="stylesheet">
     <!-- OXANIUM FONT [ENDS] -->
   </head>
   <body>
@@ -31,28 +28,21 @@
     </nav>
     <!-- NAVIGATION BAR [ENDS] -->
 
-    <main class="margin-nav--sm">
-      <h1>GALLERY</h1>
-      <img
-        src="img/underline-vector.png"
-        alt="underline-vector"
-        class="underline-vector"
-      />
+    <div class="gallery-header">
+        <h1>Gallery</h1>
+        <p>An archive of photos from GWC events and activities.</p>
+    </div>
 
-      <div class="gallery">
-        <a href="galleryspring25.html">
-          <div class="gallery-item" id="sp2025">
-            <img src="img/img20.jpeg" alt="Spring 2025 Photos" />
-            <div class="year">Spring 2025</div>
-          </div>
+    <div class="gallery">
+        <a href="galleryspring25.html" class="gallery-item" id="sp2025">
+            <img src="images/sp-cover-photo.png" alt="Spring 2025 Photos" class="gallery-img">
+            <p class="year">{SPRING 2025}</p>
         </a>
-        <a href="galleryfall24.html">
-          <div class="gallery-item" id="fa2024">
-            <img src="img/2024-2025.jpeg" alt="Fall 2024 Photos" />
-            <div class="year">Fall 2024</div>
-          </div>
+        <a href="galleryfall24.html" class="gallery-item" id="fa2024">
+            <img src="images/fa-cover-photo.png" alt="Fall 2024 Photos" class="gallery-img">
+            <p class="year">{FALL 2024}</p>
         </a>
-      </div>
-    </main>
+    </div>
+    
   </body>
 </html>
