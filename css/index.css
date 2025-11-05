@@ -17,6 +17,8 @@
   
   .logo {
     margin: 10px 20px;
+    width: 14rem;
+    height: auto;
   }
   
   .navbar {

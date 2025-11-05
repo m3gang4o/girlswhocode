@@ -170,6 +170,150 @@
         word-break: break-word;
       }
 
+      /* CODE SNIPPET OF THE MONTH SECTION */
+      .code-snippet-section {
+        padding: 12rem 2rem;
+        background-color: #fff;
+        margin-bottom: 0;
+      }
+
+      .code-snippet-header {
+        max-width: 1400px;
+        margin: 0 auto 4rem auto;
+        text-align: center;
+        padding: 0 2rem;
+      }
+
+      .code-snippet-title {
+        color: #0d9c90;
+        font-size: 5.6rem;
+        font-family: "Oxanium", sans-serif;
+        font-weight: 700;
+        margin-top: 0.8rem;
+      }
+
+      .code-snippet-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      .month-snippet {
+        background-color: #e4ece9;
+        border-radius: 16px;
+        padding: 3rem;
+        max-width: 800px;
+        width: 100%;
+        box-shadow: 0 4px 20px rgba(13, 156, 144, 0.1);
+        position: relative;
+      }
+
+      .copy-button {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background-color: #0d9c90;
+        border: none;
+        border-radius: 8px;
+        padding: 0.8rem;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(13, 156, 144, 0.3);
+      }
+
+      .copy-button:hover {
+        background-color: #0b8278;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(13, 156, 144, 0.4);
+      }
+
+      .copy-button:active {
+        transform: translateY(0);
+      }
+
+      .copy-button svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      .copy-feedback {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background-color: #0d9c90;
+        color: white;
+        padding: 0.8rem 1.5rem;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+        box-shadow: 0 4px 12px rgba(13, 156, 144, 0.4);
+      }
+
+      .copy-feedback.show {
+        opacity: 1;
+      }
+
+      .code-language {
+        font-size: 1.2rem;
+        color: #0d9c90;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+
+      .month-snippet pre {
+        font-family: monospace;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #000;
+        white-space: pre-wrap;
+        word-break: break-word;
+        margin: 0;
+      }
+
+      .challenge-text {
+        font-size: 2rem;
+        line-height: 1.6;
+        color: #666;
+        text-align: center;
+        max-width: 1200px;
+      }
+
+      .challenge-text strong {
+        color: #0d9c90;
+        font-weight: 700;
+      }
+
+      .gwc-logo {
+        width: 4rem;
+        height: auto;
+        margin-bottom: 1.6rem;
+      }
+
+      .sub-heading {
+        color: #17183e;
+        font-size: 2.4rem;
+        margin-bottom: 0.8rem;
+        font-weight: 700;
+      }
+
+      .underline-decoration {
+        max-width: 50rem;
+        margin: 0 auto 4rem auto;
+      }
+
       /* MOBILE RESPONSIVE */
       @media (max-width: 768px) {
         .main-content {
@@ -183,6 +327,48 @@
         .code-snippet {
           flex-basis: 100%;
           font-size: 11.5px;
+        }
+
+        .code-snippet-section {
+          padding: 8rem 2rem;
+        }
+
+        .code-snippet-header {
+          margin-bottom: 3rem;
+        }
+
+        .code-snippet-title {
+          font-size: 4.2rem;
+        }
+
+        .month-snippet {
+          padding: 2rem;
+        }
+
+        .month-snippet pre {
+          font-size: 12px;
+        }
+
+        .challenge-text {
+          font-size: 1.6rem;
+        }
+
+        .copy-button {
+          top: 1rem;
+          right: 1rem;
+          padding: 0.6rem;
+        }
+
+        .copy-button svg {
+          width: 18px;
+          height: 18px;
+        }
+
+        .copy-feedback {
+          top: 1rem;
+          right: 1rem;
+          padding: 0.6rem 1.2rem;
+          font-size: 1.2rem;
         }
       }
     </style>
@@ -256,6 +442,53 @@ public class GirlsWhoClub {
       </div>
     </div>
     <!-- MAIN CONTENT ENDS -->
+
+    <!-- CODE SNIPPET OF THE MONTH SECTION [STARTS] -->
+    <section class="code-snippet-section">
+      <div class="code-snippet-header">
+        <img src="img/star_img.png" alt="Image of Star" class="gwc-logo" />
+        <h2 class="sub-heading">Featured</h2>
+        <h2 class="code-snippet-title">Code Snippet of the Month</h2>
+        <svg
+          class="underline-decoration"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1418 125"
+        >
+          <path
+            d="M1412.29 72.17c-11.04-5.78-20.07-14.33-85.46-25.24-22.37-3.63-44.69-7.56-67.07-11.04-167.11-22.06-181.65-21.24-304.94-30.56C888.78 1.39 822.57 1.1 756.44 0c-46.63-.11-93.27 1.56-139.89 2.5C365.5 13.55 452.86 7.68 277.94 23.15 202.57 33.32 127.38 45.01 52.07 55.69c-11.23 2.41-22.63 4.17-33.71 7.22C6.1 66.33 5.64 66.19 3.89 67.79c-7.99 5.78-2.98 20.14 8.72 17.5 33.99-9.47 32.28-8.57 178.06-29.66 4.26 4.48 7.29 3.38 18.42 3.11 13.19-.32 26.38-.53 39.56-1.12 53.51-3.81 106.88-9.62 160.36-13.95 18.41-1.3 36.8-3.12 55.21-4.7 23.21-1.16 46.43-2.29 69.65-3.4 120.28-2.16 85.46-3.13 234.65-1.52 23.42.99 1.57-.18 125.72 6.9 96.61 8.88 200.92 27.94 295.42 46.12 40.87 7.91 116.67 23.2 156.31 36.78 3.81 1.05 8.28-.27 10.51-3.58 3.17-3.72 2.66-9.7-.78-13.13-3.25-3.12-8.14-3.44-12.18-5.08-17.89-5.85-44.19-12.09-63.67-16.56l26.16 3.28c23.02 3.13 46.28 3.92 69.34 6.75 10.8.96 25.43 1.81 34.34-4.39 2.26-1.54 4.86-2.75 6.21-5.27 2.76-4.59 1.13-11.06-3.59-13.68ZM925.4 23.77c37.64 1.4 153.99 10.85 196.64 14.94 45.95 5.51 91.89 11.03 137.76 17.19 24.25 4.77 74.13 11.21 101.72 18.14-11.87-1.15-23.77-1.97-35.65-3.06-133.46-15.9-266.8-33.02-400.47-47.21Z"
+            fill="#0D9C90"
+          ></path>
+        </svg>
+      </div>
+      <div class="code-snippet-container">
+        <div class="month-snippet">
+          <button class="copy-button" onclick="copyCodeSnippet()" title="Copy code">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+          <div class="code-language">Python</div>
+          <pre id="code-snippet">moods = {
+    "happy": "😊",
+    "sad": "😢",
+    "excited": "🤩",
+    "tired": "😴",
+    "silly": "😜"
+}
+
+feeling = input("How are you feeling today? ").lower()
+
+print("Your mood emoji:", moods.get(feeling, "🤔"))</pre>
+          <div class="copy-feedback" id="copy-feedback">Copied!</div>
+        </div>
+        <div class="challenge-text">
+          <strong>Challenge:</strong> Add more moods or make your code show multiple emojis for mixed feelings!
+        </div>
+      </div>
+    </section>
+    <!-- CODE SNIPPET OF THE MONTH SECTION [ENDS] -->
+
     <!-- Calendar -->
     <div class="calendar-container">
       <iframe src="https://calendar.google.com/calendar/embed?src=a00ee7b7d483b19d0b3175da73a43b292a05bd8ea306e7cc2837d3bb4a9a366f%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
@@ -316,6 +549,55 @@ public class GirlsWhoClub {
           type();
         }
       });
+
+      // Copy code snippet function
+      function copyCodeSnippet() {
+        const codeElement = document.getElementById('code-snippet');
+        const codeText = codeElement.textContent;
+        const copyButton = document.querySelector('.copy-button');
+        const feedback = document.getElementById('copy-feedback');
+        
+        navigator.clipboard.writeText(codeText).then(function() {
+          // Hide button and show feedback
+          copyButton.style.opacity = '0';
+          copyButton.style.pointerEvents = 'none';
+          feedback.classList.add('show');
+          
+          // Show button and hide feedback after 2 seconds
+          setTimeout(function() {
+            feedback.classList.remove('show');
+            copyButton.style.opacity = '1';
+            copyButton.style.pointerEvents = 'auto';
+          }, 2000);
+        }).catch(function(err) {
+          console.error('Failed to copy code: ', err);
+          // Fallback for older browsers
+          const textArea = document.createElement('textarea');
+          textArea.value = codeText;
+          textArea.style.position = 'fixed';
+          textArea.style.opacity = '0';
+          document.body.appendChild(textArea);
+          textArea.select();
+          try {
+            document.execCommand('copy');
+            // Hide button and show feedback
+            copyButton.style.opacity = '0';
+            copyButton.style.pointerEvents = 'none';
+            feedback.classList.add('show');
+            setTimeout(function() {
+              feedback.classList.remove('show');
+              copyButton.style.opacity = '1';
+              copyButton.style.pointerEvents = 'auto';
+            }, 2000);
+          } catch (err) {
+            console.error('Fallback copy failed: ', err);
+            // Restore button if copy failed
+            copyButton.style.opacity = '1';
+            copyButton.style.pointerEvents = 'auto';
+          }
+          document.body.removeChild(textArea);
+        });
+      }
     </script>
   </body>
 </html>
