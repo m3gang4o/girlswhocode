@@ -118,7 +118,7 @@ strong {
 /*============================*/
 
 .hero-logo {
-  width: 100%;
+  width: 80%;
   max-width: 75rem;
 }
 
@@ -127,9 +127,10 @@ strong {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 12rem 2.4rem;
-  margin-bottom: 12rem;
+  padding: 10rem 2.4rem;
+  margin-bottom: 8rem;
   overflow: hidden;
+  margin-top: 2rem;
 }
 
 .hero-content {
@@ -137,13 +138,13 @@ strong {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 60fr 40fr;
-  gap: 4rem;
+  grid-template-columns: 5fr 5fr;
   align-items: center;
+  padding: 0rem 8rem;
 }
 
 .hero-text h1 {
-  font-size: 4.4rem;
+  font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
   color: #333;
@@ -158,7 +159,7 @@ strong {
   font-size: 1.6rem;
   color: #666;
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .cta-button {
@@ -183,9 +184,9 @@ strong {
   gap: 1rem;
 }
 
-.gallery-container {
+/* .gallery-container {
   margin-bottom: 1.5rem;
-}
+} */
 
 .gallery-image {
   width: 100%;
@@ -193,22 +194,59 @@ strong {
   object-fit: cover;
 }
 
+/* Sponsorship Section */
+.sponsorship-section {
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #e9ecef;
+  margin-top: 3rem;
+}
+
+.sponsorship-label {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sponsor-logo {
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 /* Add these responsive styles */
 @media screen and (max-width: 1024px) {
   .hero-content {
-    grid-template-columns: 1fr;
-    gap: 6rem;
+    grid-template-columns: 80vw;
+    gap: 2rem;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
   }
 
   .hero-logo {
     margin-bottom: 2rem;
   }
 
+  .gallery-image {
+    display: none;
+  }
+
   .hero-gallery {
     order: 0;
     max-width: 60rem;
     margin: 0 auto;
+    grid-row: 2;
+  }
+
+  .grid-text {
+    grid-row: 1;
   }
 
   .hero-text h1 {
@@ -218,6 +256,19 @@ strong {
   .hero-description {
     max-width: 60rem;
     margin: 0 auto;
+  }
+
+  .sponsorship-section {
+    margin-top: 2.5rem;
+    padding: 2rem;
+  }
+
+  .sponsor-logo {
+    max-width: 18rem;
+  }
+
+  .cta-button {
+    margin-top: 3rem;
   }
 }
 /* 
@@ -394,14 +445,13 @@ strong {
 /* INDIVIDUAL MEMBERS SECTION */
 
 .team-grid {
-  max-width: 1600px;
+  max-width: 1400px;
   margin: 0 auto;
-  /* padding: 2rem; */
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  /* gap: 10rem; */
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .team-member {
@@ -424,7 +474,7 @@ strong {
 
 .member-image-wrapper {
   width: 100%;
-  height: 30rem;
+  height: 25rem;
   position: relative;
   overflow: hidden;
 }
@@ -487,14 +537,6 @@ strong {
 .team-member:hover .member-role,
 .team-member:hover .member-pronouns {
   color: rgba(255, 255, 255, 0.9);
-}
-
-.pallavi-image {
-  object-position: center -50px;
-}
-
-.meghan-image {
-  object-position: center 0 -1000px;
 }
 
 /*============================*/
@@ -741,10 +783,6 @@ strong {
 /*     RESPONSIVE STYLES      */
 /*============================*/
 @media screen and (max-width: 1200px) {
-  .team-grid {
-    gap: 2rem;
-  }
-
   .team-member {
     width: 22rem;
     min-width: 22rem;
@@ -757,24 +795,7 @@ strong {
   }
 }
 
-@media screen and (max-width: 900px) {
-  .team-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .team-member {
-    width: 24rem;
-    min-width: 24rem;
-    margin-bottom: 3rem;
-  }
-}
-
 @media screen and (max-width: 480px) {
-  .team-grid {
-    padding: 1rem;
-  }
-
   .team-member {
     width: 100%;
     min-width: auto;
@@ -899,5 +920,19 @@ strong {
   .faq-box {
     width: 100%;
     padding: 2rem;
+  }
+
+  .sponsorship-section {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+
+  .sponsorship-label {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .sponsor-logo {
+    max-width: 15rem;
   }
 }
