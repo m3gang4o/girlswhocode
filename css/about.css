@@ -123,7 +123,14 @@ strong {
 }
 
 .hero-container {
-  background-color: #e4ece9;
+  /* background-color: #e4ece9; */
+  background: linear-gradient(
+    155deg,
+    #fff5e0 0%,
+    #e7f8f2 32%,
+    #dff2ff 66%,
+    #f9e8ee 100%
+  );
   min-height: 100vh;
   display: flex;
   align-items: center;
