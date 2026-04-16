@@ -1,11 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About (Staff)</title>
 
-    <link rel="stylesheet" href= "css/navigation.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <script src="js/navigation.js" defer></script>
     <!--OXANIUM-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,8 +18,21 @@
   <body>
     <!-- NAVIGATION BAR STARTS -->
     <nav class="navbar">
-      <img src="photos/GWC_Logo.png" alt="GWC Logo" width="120px" class="logo" />
-      <ul class="nav-links">
+      <a href="index.html">
+        <img src="img/GWC_Logo.png" alt="GWC Logo" class="logo" />
+      </a>
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html" class="nav-btn">Home</a></li>
         <li><a href="about.html" class="nav-btn">About</a></li>
         <li><a href="students.html" class="nav-btn">Students</a></li>

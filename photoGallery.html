@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,10 +6,14 @@
     <title>GWC Photo Gallery</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/navigation.css" />
+    <script src="js/navigation.js" defer></script>
     <!-- OXANIUM FONT [STARTS] -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alike&family=Kumar+One&family=Notable&family=Oxanium:wght@200..800&family=Press+Start+2P&family=Vampiro+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alike&family=Kumar+One&family=Notable&family=Oxanium:wght@200..800&family=Press+Start+2P&family=Vampiro+One&display=swap"
+      rel="stylesheet"
+    />
     <!-- OXANIUM FONT [ENDS] -->
   </head>
   <body>
@@ -18,7 +22,18 @@
       <a href="index.html">
         <img src="img/GWC_Logo.png" alt="GWC Logo" class="logo" />
       </a>
-      <ul class="nav-links">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html" class="nav-btn">Home</a></li>
         <li><a href="about.html" class="nav-btn">About</a></li>
         <li><a href="students.html" class="nav-btn">Students</a></li>
@@ -29,20 +44,27 @@
     <!-- NAVIGATION BAR [ENDS] -->
 
     <div class="gallery-header">
-        <h1>Gallery</h1>
-        <p>An archive of photos from GWC events and activities.</p>
+      <h1>Gallery</h1>
+      <p>An archive of photos from GWC events and activities.</p>
     </div>
 
     <div class="gallery">
-        <a href="galleryspring25.html" class="gallery-item" id="sp2025">
-            <img src="images/sp-cover-photo.png" alt="Spring 2025 Photos" class="gallery-img">
-            <p class="year">{SPRING 2025}</p>
-        </a>
-        <a href="galleryfall24.html" class="gallery-item" id="fa2024">
-            <img src="images/fa-cover-photo.png" alt="Fall 2024 Photos" class="gallery-img">
-            <p class="year">{FALL 2024}</p>
-        </a>
+      <a href="galleryspring25.html" class="gallery-item" id="sp2025">
+        <img
+          src="images/sp-cover-photo.png"
+          alt="Spring 2025 Photos"
+          class="gallery-img"
+        />
+        <p class="year">{SPRING 2025}</p>
+      </a>
+      <a href="galleryfall24.html" class="gallery-item" id="fa2024">
+        <img
+          src="images/fa-cover-photo.png"
+          alt="Fall 2024 Photos"
+          class="gallery-img"
+        />
+        <p class="year">{FALL 2024}</p>
+      </a>
     </div>
-    
   </body>
 </html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,6 +7,7 @@
 
     <!-- Navigation bar styles -->
     <link rel="stylesheet" href="css/navigation.css" />
+    <script src="js/navigation.js" defer></script>
 
     <!-- OXANIUM FONT [STARTS] -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -38,7 +39,11 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(26, 26, 26, 0.95) 0%, rgba(13, 13, 13, 0.95) 100%);
+        background: linear-gradient(
+          135deg,
+          rgba(26, 26, 26, 0.95) 0%,
+          rgba(13, 13, 13, 0.95) 100%
+        );
         display: flex;
         align-items: flex-start;
         justify-content: flex-start;
@@ -54,7 +59,7 @@
       }
 
       .terminal-container {
-        font-family: 'Courier New', monospace;
+        font-family: "Courier New", monospace;
         color: #c0c0c0;
         font-size: 16px;
         line-height: 2;
@@ -103,7 +108,7 @@
         color: #7dd3c0;
         margin-right: 8px;
       }
-      
+
       .calendar-container {
         display: flex;
         justify-content: center;
@@ -117,10 +122,12 @@
       }
 
       @keyframes blink {
-        0%, 49% {
+        0%,
+        49% {
           opacity: 1;
         }
-        50%, 100% {
+        50%,
+        100% {
           opacity: 0;
         }
       }
@@ -129,12 +136,12 @@
         #terminal-loader {
           padding: 20px;
         }
-        
+
         .terminal-container {
           font-size: 13px;
           line-height: 1.8;
         }
-        
+
         .terminal-line.header {
           font-size: 12px;
         }
@@ -390,7 +397,18 @@
       <a href="index.html">
         <img src="img/GWC_Logo.png" alt="GWC Logo" class="logo" />
       </a>
-      <ul class="nav-links">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html" class="nav-btn">Home</a></li>
         <li><a href="about.html" class="nav-btn">About</a></li>
         <li><a href="students.html" class="nav-btn">Students</a></li>
@@ -462,14 +480,28 @@ public class GirlsWhoClub {
       </div>
       <div class="code-snippet-container">
         <div class="month-snippet">
-          <button class="copy-button" onclick="copyCodeSnippet()" title="Copy code">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <button
+            class="copy-button"
+            onclick="copyCodeSnippet()"
+            title="Copy code"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
               <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              <path
+                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+              ></path>
             </svg>
           </button>
           <div class="code-language">Python</div>
-          <pre id="code-snippet">moods = {
+          <pre id="code-snippet">
+moods = {
     "happy": "😊",
     "sad": "😢",
     "excited": "🤩",
@@ -479,11 +511,13 @@ public class GirlsWhoClub {
 
 feeling = input("How are you feeling today? ").lower()
 
-print("Your mood emoji:", moods.get(feeling, "🤔"))</pre>
+print("Your mood emoji:", moods.get(feeling, "🤔"))</pre
+          >
           <div class="copy-feedback" id="copy-feedback">Copied!</div>
         </div>
         <div class="challenge-text">
-          <strong>Challenge:</strong> Add more moods or make your code show multiple emojis for mixed feelings!
+          <strong>Challenge:</strong> Add more moods or make your code show
+          multiple emojis for mixed feelings!
         </div>
       </div>
     </section>
@@ -491,44 +525,51 @@ print("Your mood emoji:", moods.get(feeling, "🤔"))</pre>
 
     <!-- Calendar -->
     <div class="calendar-container">
-      <iframe src="https://calendar.google.com/calendar/embed?src=a00ee7b7d483b19d0b3175da73a43b292a05bd8ea306e7cc2837d3bb4a9a366f%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      <iframe
+        src="https://calendar.google.com/calendar/embed?src=a00ee7b7d483b19d0b3175da73a43b292a05bd8ea306e7cc2837d3bb4a9a366f%40group.calendar.google.com&ctz=America%2FNew_York"
+        style="border: 0"
+        width="800"
+        height="600"
+        frameborder="0"
+        scrolling="no"
+      ></iframe>
     </div>
 
     <script>
       // Terminal loading screen typewriter animation
-      window.addEventListener('load', function() {
-        const loader = document.getElementById('terminal-loader');
-        const hasVisitedThisSession = sessionStorage.getItem('gwc_visited');
-        
+      window.addEventListener("load", function () {
+        const loader = document.getElementById("terminal-loader");
+        const hasVisitedThisSession = sessionStorage.getItem("gwc_visited");
+
         // If user has already seen the loading screen in this browser session, skip it
         if (hasVisitedThisSession) {
-          loader.style.display = 'none';
+          loader.style.display = "none";
           return;
         }
-        
+
         // Mark that user has seen the loading screen in this session
-        sessionStorage.setItem('gwc_visited', 'true');
-        
-        const lines = document.querySelectorAll('.terminal-line');
+        sessionStorage.setItem("gwc_visited", "true");
+
+        const lines = document.querySelectorAll(".terminal-line");
         const speed = 40; // typing speed in ms per character
         let currentDelay = 0;
-        
+
         lines.forEach((line, index) => {
           setTimeout(() => {
             typeWriter(line, speed, index === lines.length - 1);
           }, currentDelay);
-          
+
           // Calculate delay for next line: current delay + time to type this line + pause
           const textLength = line.textContent.length;
-          currentDelay += (textLength * speed) + 300; // 300ms pause between lines
+          currentDelay += textLength * speed + 300; // 300ms pause between lines
         });
-        
+
         function typeWriter(element, speed, isLast) {
           const text = element.textContent;
-          element.textContent = '';
-          element.style.opacity = '1';
+          element.textContent = "";
+          element.style.opacity = "1";
           let i = 0;
-          
+
           function type() {
             if (i < text.length) {
               element.textContent += text.charAt(i);
@@ -536,67 +577,70 @@ print("Your mood emoji:", moods.get(feeling, "🤔"))</pre>
               setTimeout(type, speed);
             } else if (isLast) {
               // Fade out after last line finishes typing
-              setTimeout(function() {
-                loader.classList.add('fade-out');
-                
-                setTimeout(function() {
-                  loader.style.display = 'none';
+              setTimeout(function () {
+                loader.classList.add("fade-out");
+
+                setTimeout(function () {
+                  loader.style.display = "none";
                 }, 800);
               }, 800); // Wait a bit before fading out
             }
           }
-          
+
           type();
         }
       });
 
       // Copy code snippet function
       function copyCodeSnippet() {
-        const codeElement = document.getElementById('code-snippet');
+        const codeElement = document.getElementById("code-snippet");
         const codeText = codeElement.textContent;
-        const copyButton = document.querySelector('.copy-button');
-        const feedback = document.getElementById('copy-feedback');
-        
-        navigator.clipboard.writeText(codeText).then(function() {
-          // Hide button and show feedback
-          copyButton.style.opacity = '0';
-          copyButton.style.pointerEvents = 'none';
-          feedback.classList.add('show');
-          
-          // Show button and hide feedback after 2 seconds
-          setTimeout(function() {
-            feedback.classList.remove('show');
-            copyButton.style.opacity = '1';
-            copyButton.style.pointerEvents = 'auto';
-          }, 2000);
-        }).catch(function(err) {
-          console.error('Failed to copy code: ', err);
-          // Fallback for older browsers
-          const textArea = document.createElement('textarea');
-          textArea.value = codeText;
-          textArea.style.position = 'fixed';
-          textArea.style.opacity = '0';
-          document.body.appendChild(textArea);
-          textArea.select();
-          try {
-            document.execCommand('copy');
+        const copyButton = document.querySelector(".copy-button");
+        const feedback = document.getElementById("copy-feedback");
+
+        navigator.clipboard
+          .writeText(codeText)
+          .then(function () {
             // Hide button and show feedback
-            copyButton.style.opacity = '0';
-            copyButton.style.pointerEvents = 'none';
-            feedback.classList.add('show');
-            setTimeout(function() {
-              feedback.classList.remove('show');
-              copyButton.style.opacity = '1';
-              copyButton.style.pointerEvents = 'auto';
+            copyButton.style.opacity = "0";
+            copyButton.style.pointerEvents = "none";
+            feedback.classList.add("show");
+
+            // Show button and hide feedback after 2 seconds
+            setTimeout(function () {
+              feedback.classList.remove("show");
+              copyButton.style.opacity = "1";
+              copyButton.style.pointerEvents = "auto";
             }, 2000);
-          } catch (err) {
-            console.error('Fallback copy failed: ', err);
-            // Restore button if copy failed
-            copyButton.style.opacity = '1';
-            copyButton.style.pointerEvents = 'auto';
-          }
-          document.body.removeChild(textArea);
-        });
+          })
+          .catch(function (err) {
+            console.error("Failed to copy code: ", err);
+            // Fallback for older browsers
+            const textArea = document.createElement("textarea");
+            textArea.value = codeText;
+            textArea.style.position = "fixed";
+            textArea.style.opacity = "0";
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+              document.execCommand("copy");
+              // Hide button and show feedback
+              copyButton.style.opacity = "0";
+              copyButton.style.pointerEvents = "none";
+              feedback.classList.add("show");
+              setTimeout(function () {
+                feedback.classList.remove("show");
+                copyButton.style.opacity = "1";
+                copyButton.style.pointerEvents = "auto";
+              }, 2000);
+            } catch (err) {
+              console.error("Fallback copy failed: ", err);
+              // Restore button if copy failed
+              copyButton.style.opacity = "1";
+              copyButton.style.pointerEvents = "auto";
+            }
+            document.body.removeChild(textArea);
+          });
       }
     </script>
   </body>

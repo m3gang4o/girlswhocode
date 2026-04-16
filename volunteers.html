@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,6 +6,7 @@
     <title>Volunteer Roles</title>
     <link rel="stylesheet" href="css/getInvolvedVolunteers.css" />
     <link rel="stylesheet" href="css/navigation.css" />
+    <script src="js/navigation.js" defer></script>
 
     <!-- OXANIUM FONT [STARTS] -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -22,7 +23,18 @@
       <a href="index.html">
         <img src="img/GWC_Logo.png" alt="GWC Logo" class="logo" />
       </a>
-      <ul class="nav-links">
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        aria-label="Open navigation menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
         <li><a href="index.html" class="nav-btn">Home</a></li>
         <li><a href="about.html" class="nav-btn">About</a></li>
         <li><a href="students.html" class="nav-btn">Students</a></li>
