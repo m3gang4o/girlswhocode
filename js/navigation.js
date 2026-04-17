@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const MOBILE_BREAKPOINT = 880;
   const MOBILE_LOGO_SRC = "img/GWC_Logo_V2.png";
+  const MOBILE_CLOSE_DELAY_MS = 150;
 
   const syncLogoForMenuState = (navbar, desktopLogoSrc) => {
     const logo = navbar.querySelector(".logo");
@@ -66,7 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     navLinks.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        closeNav(navbar, toggleButton, desktopLogoSrc);
+        window.setTimeout(() => {
+          closeNav(navbar, toggleButton, desktopLogoSrc);
+        }, MOBILE_CLOSE_DELAY_MS);
       });
     });
 
