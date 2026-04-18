@@ -86,17 +86,7 @@ main.margin-nav {
 }
 
 .students-showcase {
-  width: min(
-    100%,
-    138rem,
-    calc(
-      (
-          100vh - 8rem - 2 * clamp(1rem, 1.2vw, 1.8rem) -
-            clamp(0.8rem, 1vw, 1.6rem)
-        ) *
-        2
-    )
-  );
+  width: min(100%, 138rem);
   height: auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -289,7 +279,7 @@ main.margin-nav {
   .students-graphic {
     height: auto;
     object-fit: contain;
-    max-height: min(100vh, 80rem);
+    max-height: 80rem;
   }
 
   .students-intro {
@@ -346,21 +336,6 @@ main.margin-nav {
 
   .join-btn {
     min-width: 16.5rem;
-  }
-}
-
-@media (max-height: 860px) and (min-width: 1101px) {
-  .intro-cover-heading {
-    font-size: clamp(2.8rem, 3.8vw, 4.6rem);
-  }
-
-  .intro-bottom {
-    display: none;
-  }
-
-  .students-graphic {
-    height: 100%;
-    object-fit: cover;
   }
 }
 
